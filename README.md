@@ -1,7 +1,7 @@
 Grid Space Simulator
 ---
 ___
-####Design Decisions
+#### Design Decisions
 The A* algorithm works by assigning an "F score" to valid spaces in 
 a given grid that is typically denotated by f(n). A space's F score is then a 
 function of two things:
@@ -44,7 +44,7 @@ algorithms and simply define scores/attributes on them as needed when they initi
 This meant moving all of the A* logic into the Simulator class, which I think also helps make
 it a little more readable by putting all the relevant processes in one place.
 
-######The Grid Class
+###### The Grid Class
 This desire for modularity is also what led to a very simple Grid class:
 
 ```python
@@ -62,7 +62,7 @@ must accept two parameters in its constructor as x and y coordinates, but otherw
 class a user wants.
 
 
-######The Simulator
+###### The Simulator
 This is where the bulk of the logic happens, and where the entirety of the A* algorithm lives.
 
 Because each Space object has no idea what it's being used for until the simulator uses it, the simulator
@@ -111,7 +111,7 @@ find_path(), get_path(), and display() where the methods' behavior would change
 depending on the value passed in to self.alg.
 
 
-######Implementation Details
+###### Implementation Details
 As it is right now, the robot can only move along the cardinal directions (left, right, up and down). I originally had
 it able to move along the diagonals as well, which helped it find shorter paths,
 but also led to some unexpected behavior on certain grid configurations as shown below.
@@ -119,14 +119,11 @@ but also led to some unexpected behavior on certain grid configurations as shown
 ![Diagonal Wall Clipping](/imgs/clip_through_walls.jpg)
 
 which on a physical intuition level doesn't feel quite right (since a physical robot would have a width and need some 
-kind of minimum clearance between the obstacles to be allowed to make that move). I would probably go back and add some 
-logic in the _build_neighbors() method to detect if something like that was happening, but within the time-limit it was
-simpler to just restrict the movement of the robot so that it would either have to go around something like that, or 
-declare that it was trapped with no path to the goal.
+kind of minimum clearance between the obstacles to be allowed to make that move). Some things to add in the future would be to create some logic in the _build_neighbors() method to detect if something like that was happening.
 
 
 ___
-####Solution and How To Use
+#### How To Use
 The only required library to run the scripts is the _numpy_ library.
 
 Running _python simulator.py_ will run the simulator with the following defaults:
@@ -144,9 +141,7 @@ location as the first position and the goal location as the last position.
 
 
 ___
-####Future Additions
-
-Some things I would add if I were to work on it more would be:
+#### Future Additions
 * [ ] Adding a method to randomly generate an obstacles array. As it is right now, it must be built and passed to the simulator manually
 * [ ] Changing the _build_neighbors() method to accept an array of "allowed_directions" to more easily change the behavior of the robot
 * [ ] Making the visual output more visual
