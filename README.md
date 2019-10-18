@@ -73,8 +73,8 @@ methods in the appropriate order.
 class Simulator:
     def __init__(self, grid, start, goal, obstacles = []):
         self.grid = grid
-        self.start = grid.at(start[0], start[1])  # saves item at the starting position
-        self.goal = grid.at(goal[0], goal[1])     # saves item at the goal position
+        self.start = grid.at(*start)  # saves item at the starting position
+        self.goal = grid.at(*goal)     # saves item at the goal position
         self.obstacles = obstacles
         self.path = []
 
