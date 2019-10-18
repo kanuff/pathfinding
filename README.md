@@ -1,4 +1,4 @@
-Grid Space Simulator
+Pathfinding
 ---
 ___
 #### Design Decisions
@@ -153,6 +153,6 @@ For A*, its time complexity also depends a lot on the heuristic it uses - so I w
 Manhattan distance to see if something else would work better.
 
 ___
-####Resources Used
+#### Resources Used
 The [Wikipedia page on A*](https://en.wikipedia.org/wiki/A*_search_algorithm) was very helpful in describing the mechanics of the algorithm,
 and the pseudocode found there helped a lot in building the find_path() function used in the Simulator class
