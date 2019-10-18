@@ -83,8 +83,7 @@ class Simulator:
         self._initialize_nodes()
 ```
 
-I did it this way to make it easier in the future to use the simulator to run different algorithms. If I were to work on
-it more, I think a useful thing to build would be to create a class (maybe something 
+I did it this way to make it easier in the future to use the simulator to run different algorithms. Going forward, I think a useful thing to build would be to create a class (maybe something 
 called PathFinding) that contains different path-finding algorithms that the Simulator would have access to. The
 Simulator class would then be changed to accept an 'alg' parameter that specifies what algorithm to use, and then would
 build itself and run accordingly.
