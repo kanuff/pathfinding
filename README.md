@@ -88,7 +88,7 @@ called PathFinding) that contains different path-finding algorithms that the Sim
 Simulator class would then be changed to accept an 'alg' parameter that specifies what algorithm to use, and then would
 build itself and run accordingly.
 
-```pythonstub
+```python
 import PathFinding as pf
 class Simulator:
     def __init__(self, ..., alg='astar'):
