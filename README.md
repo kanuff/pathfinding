@@ -144,10 +144,10 @@ ___
 #### Future Additions
 * [ ] Adding a method to randomly generate an obstacles array. As it is right now, it must be built and passed to the simulator manually
 * [ ] Changing the _build_neighbors() method to accept an array of "allowed_directions" to more easily change the behavior of the robot
-* [ ] Making the visual output more visual
+* [ ] Making the visual output more...visual
 * [ ] Adding the PathFinder class with other path-finding algorithms and refactoring the Simulator class
 * [ ] Adding some checks to make sure that the starting point and the goal point cannot become obstacles
-* [ ] Building some CLI to make the simulator easier to run with different parameters
+* [ ] Building a basic CLI to make the simulator easier to run with different parameters
 
 For A*, its time complexity also depends a lot on the heuristic it uses - so I would experiment with ones other than the 
 Manhattan distance to see if something else would work better.
