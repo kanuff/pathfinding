@@ -1,5 +1,6 @@
 Pathfinding
 ---
+(originally built for a coding challenge)
 ___
 #### Design Decisions
 The A* algorithm works by assigning an "F score" to valid spaces in 
